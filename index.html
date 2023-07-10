@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lightning Out Example</title>
+    <script src="https://getoncrm-da-dev-ed.develop.lightning.force.com/lightning/lightning.out.js"></script>
+</head>
+
+<body>
+    <!-- Placeholder for the LWC -->
+    <div id="lwcContainer"></div>
+
+    <script>
+        // Initialize Lightning Out app
+        $Lightning.use("c:lightningOut", function () {
+            $Lightning.createComponent(
+                // LWC to load
+                "c:boatsNearMe",
+                // Component attributes (optional)
+                {},
+                // Target div ID
+                "lwcContainer",
+                // Callback function (optional)
+                function (component) {
+                    // Component initialization complete
+                    console.log("LWC component initialized successfully");
+                }
+            );
+        },
+        );
+    </script>
+
+</body>
+
+</html>
